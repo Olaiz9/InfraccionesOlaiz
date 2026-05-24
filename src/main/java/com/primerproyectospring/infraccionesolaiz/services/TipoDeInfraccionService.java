@@ -1,4 +1,7 @@
 package com.primerproyectospring.infraccionesolaiz.services;
 
-public interface TipoDeInfraccionService {
+import com.primerproyectospring.infraccionesolaiz.entities.TipoDeInfraccion;
+
+public interface TipoDeInfraccionService extends BaseService<TipoDeInfraccion, Long> {
+
 }

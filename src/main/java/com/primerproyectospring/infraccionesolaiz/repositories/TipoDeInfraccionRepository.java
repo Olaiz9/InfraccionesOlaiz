@@ -1,4 +1,8 @@
 package com.primerproyectospring.infraccionesolaiz.repositories;
 
-public interface TipoDeInfraccionRepository {
+import com.primerproyectospring.infraccionesolaiz.entities.TipoDeInfraccion;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface TipoDeInfraccionRepository extends BaseRepository<TipoDeInfraccion, Long> {
 }

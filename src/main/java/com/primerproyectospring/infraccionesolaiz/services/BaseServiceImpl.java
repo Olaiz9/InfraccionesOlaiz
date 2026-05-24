@@ -1,10 +1,10 @@
-package services;
+package com.primerproyectospring.infraccionesolaiz.services;
 
-import entities.Base;
+import com.primerproyectospring.infraccionesolaiz.entities.Base;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import repositories.BaseRepository;
+import com.primerproyectospring.infraccionesolaiz.repositories.BaseRepository;
 
 import java.io.Serializable;
 import java.util.List;

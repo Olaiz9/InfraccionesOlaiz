@@ -1,4 +1,7 @@
 package com.primerproyectospring.infraccionesolaiz.services;
 
-public interface AutoridadDeConstatacionService {
+import com.primerproyectospring.infraccionesolaiz.entities.AutoridadDeConstatacion;
+
+public interface AutoridadDeConstatacionService extends BaseService<AutoridadDeConstatacion, Long> {
+
 }

@@ -1,4 +1,6 @@
 package com.primerproyectospring.infraccionesolaiz.services;
 
-public interface RutaService {
+import com.primerproyectospring.infraccionesolaiz.entities.Ruta;
+
+public interface RutaService extends BaseService<Ruta, Long> {
 }

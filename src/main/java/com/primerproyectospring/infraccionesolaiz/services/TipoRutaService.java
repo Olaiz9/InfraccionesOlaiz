@@ -1,4 +1,7 @@
 package com.primerproyectospring.infraccionesolaiz.services;
 
-public interface TipoRutaService {
+import com.primerproyectospring.infraccionesolaiz.entities.TipoRuta;
+
+public interface TipoRutaService extends BaseService<TipoRuta, Long> {
+
 }

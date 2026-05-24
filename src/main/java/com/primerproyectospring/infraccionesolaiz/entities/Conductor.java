@@ -1,8 +1,6 @@
-package entities;
+package com.primerproyectospring.infraccionesolaiz.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,4 +18,5 @@ public class Conductor extends Persona {
 
     @Column(name="domicilio")
     private String domicilio;
+
 }

@@ -1,4 +1,8 @@
 package com.primerproyectospring.infraccionesolaiz.repositories;
 
-public interface OrganizacionEstatalRepository {
+import com.primerproyectospring.infraccionesolaiz.entities.OrganizacionEstatal;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface OrganizacionEstatalRepository extends BaseRepository<OrganizacionEstatal, Long> {
 }

@@ -1,6 +1,6 @@
-package repositories;
+package com.primerproyectospring.infraccionesolaiz.repositories;
 
-import entities.Licencia;
+import com.primerproyectospring.infraccionesolaiz.entities.Licencia;
 import org.springframework.stereotype.Repository;
 
 @Repository

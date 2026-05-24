@@ -1,6 +1,6 @@
-package services;
+package com.primerproyectospring.infraccionesolaiz.services;
 
-import entities.Conductor;
+import com.primerproyectospring.infraccionesolaiz.entities.Conductor;
 
 public interface ConductorService extends BaseService<Conductor, Long> {
 }

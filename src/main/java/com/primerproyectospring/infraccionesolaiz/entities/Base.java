@@ -1,4 +1,4 @@
-package entities;
+package com.primerproyectospring.infraccionesolaiz.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

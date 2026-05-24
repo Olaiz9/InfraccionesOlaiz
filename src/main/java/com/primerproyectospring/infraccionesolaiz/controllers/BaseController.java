@@ -1,6 +1,6 @@
-package controllers;
+package com.primerproyectospring.infraccionesolaiz.controllers;
 
-import entities.Base;
+import com.primerproyectospring.infraccionesolaiz.entities.Base;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;

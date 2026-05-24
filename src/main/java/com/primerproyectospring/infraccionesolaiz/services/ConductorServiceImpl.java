@@ -1,10 +1,10 @@
-package services;
+package com.primerproyectospring.infraccionesolaiz.services;
 
-import entities.Conductor;
+import com.primerproyectospring.infraccionesolaiz.entities.Conductor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.BaseRepository;
-import repositories.ConductorRepository;
+import com.primerproyectospring.infraccionesolaiz.repositories.BaseRepository;
+import com.primerproyectospring.infraccionesolaiz.repositories.ConductorRepository;
 
 @Service
 public class ConductorServiceImpl extends BaseServiceImpl<Conductor, Long> implements ConductorService {

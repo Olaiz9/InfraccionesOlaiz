@@ -1,10 +1,10 @@
-package services;
+package com.primerproyectospring.infraccionesolaiz.services;
 
-import entities.Licencia;
+import com.primerproyectospring.infraccionesolaiz.entities.Licencia;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.BaseRepository;
-import repositories.LicenciaRepository;
+import com.primerproyectospring.infraccionesolaiz.repositories.BaseRepository;
+import com.primerproyectospring.infraccionesolaiz.repositories.LicenciaRepository;
 
 @Service
 public class LicenciaServiceImpl extends BaseServiceImpl<Licencia, Long> implements LicenciaService {

@@ -1,6 +1,6 @@
-package repositories;
+package com.primerproyectospring.infraccionesolaiz.repositories;
 
-import entities.Base;
+import com.primerproyectospring.infraccionesolaiz.entities.Base;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 

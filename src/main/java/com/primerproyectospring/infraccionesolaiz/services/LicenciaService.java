@@ -1,6 +1,6 @@
-package services;
+package com.primerproyectospring.infraccionesolaiz.services;
 
-import entities.Licencia;
+import com.primerproyectospring.infraccionesolaiz.entities.Licencia;
 
 public interface LicenciaService extends BaseService<Licencia, Long> {
 }

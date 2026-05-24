@@ -1,10 +1,10 @@
-package controllers;
+package com.primerproyectospring.infraccionesolaiz.controllers;
 
-import entities.Licencia;
+import com.primerproyectospring.infraccionesolaiz.entities.Licencia;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import services.LicenciaServiceImpl;
+import com.primerproyectospring.infraccionesolaiz.services.LicenciaServiceImpl;
 
 @RestController
 @CrossOrigin(origins = "*")

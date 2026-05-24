@@ -1,6 +1,6 @@
-package repositories;
+package com.primerproyectospring.infraccionesolaiz.repositories;
 
-import entities.Conductor;
+import com.primerproyectospring.infraccionesolaiz.entities.Conductor;
 import org.springframework.stereotype.Repository;
 
 @Repository

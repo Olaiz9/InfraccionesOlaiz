@@ -1,4 +1,6 @@
 package com.primerproyectospring.infraccionesolaiz.services;
 
-public interface VehiculoService {
+import com.primerproyectospring.infraccionesolaiz.entities.Vehiculo;
+
+public interface VehiculoService extends BaseService<Vehiculo, Long> {
 }

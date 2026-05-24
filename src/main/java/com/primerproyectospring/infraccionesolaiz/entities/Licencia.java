@@ -1,4 +1,4 @@
-package entities;
+package com.primerproyectospring.infraccionesolaiz.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -19,7 +19,7 @@ import java.time.LocalDate;
 public class Licencia extends Base {
 
     @Column(name = "numero_licencia")
-    private int numeroLicencia;
+    private Integer numeroLicencia;
 
     @Column(name = "fecha_vto")
     private LocalDate fechaDeVto;

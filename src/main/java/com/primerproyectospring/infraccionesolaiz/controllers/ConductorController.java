@@ -1,10 +1,10 @@
-package controllers;
+package com.primerproyectospring.infraccionesolaiz.controllers;
 
-import entities.Conductor;
+import com.primerproyectospring.infraccionesolaiz.entities.Conductor;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import services.ConductorServiceImpl;
+import com.primerproyectospring.infraccionesolaiz.services.ConductorServiceImpl;
 
 @RestController
 @CrossOrigin(origins = "*")

@@ -1,4 +1,4 @@
-package entities;
+package com.primerproyectospring.infraccionesolaiz.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
@@ -21,7 +21,7 @@ public abstract class Persona extends Base {
     protected String apellido;
 
     @Column(name = "dni")
-    protected int dni;
+    protected Integer dni;
 
     @Column(name="genero")
     protected String genero;

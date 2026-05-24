@@ -1,4 +1,7 @@
 package com.primerproyectospring.infraccionesolaiz.services;
 
-public interface EstadoDelActaService {
+import com.primerproyectospring.infraccionesolaiz.entities.EstadoDelActa;
+
+public interface EstadoDelActaService extends BaseService<EstadoDelActa, Long> {
+
 }

@@ -1,6 +1,6 @@
-package services;
+package com.primerproyectospring.infraccionesolaiz.services;
 
-import entities.Base;
+import com.primerproyectospring.infraccionesolaiz.entities.Base;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

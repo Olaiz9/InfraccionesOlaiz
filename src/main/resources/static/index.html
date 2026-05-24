@@ -1,10 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Infracciones - Operativo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-$END$
+
+<aside class="sidebar">
+    <div class="sidebar-logo">
+        <span class="logo-brand">TRÁNSITO</span><span class="logo-sys">sys</span><span class="logo-dot">.</span>
+    </div>
+    <nav>
+        <button class="nav-btn active" id="btn-vehiculos">Vehículos</button>
+        <button class="nav-btn" id="btn-conductores">Conductores</button>
+        <button class="nav-btn" id="btn-autoridades">Autoridades</button>
+        <button class="nav-btn" id="btn-actas">Actas</button>
+    </nav>
+</aside>
+
+<main class="main-content">
+
+    <section id="panel-vehiculos" class="panel active">
+        <header class="panel-header">
+            <h1>Gestión de Vehículos</h1>
+            <p>Administración del parque automotor</p>
+        </header>
+
+        <div class="split-view">
+            <div class="data-list">
+                <table id="tabla-vehiculos">
+                    <thead>
+                    <tr>
+                        <th>Dominio</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Color</th>
+                        <th>Año</th>
+                        <th>Acción</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan="4" class="empty-msg">Cargando vehículos...</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="data-form">
+                <h3>Registrar / Editar</h3>
+                <form id="form-vehiculo">
+                    <input type="hidden" id="vehiculo-id">
+
+                    <div class="form-group">
+                        <label for="dominio">Dominio (Patente):</label>
+                        <input type="text" id="dominio" placeholder="Ej: AB123CD" maxlength="7" minlength="6" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color">Color:</label>
+                        <input type="text" id="color" placeholder="Ej: Blanco" pattern="[A-Za-zÀ-ÿ\s]+" title="Solo se permiten letras" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="anio">Año de Patentamiento:</label>
+                        <input type="number" id="anio" placeholder="Ej: 2023" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="marcaText">Marca:</label>
+                        <input type="text" id="marcaText" placeholder="Ej: Ford" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modeloText">Modelo:</label>
+                        <input type="text" id="modeloText" placeholder="Ej: Fiesta" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="btn-limpiar">Limpiar</button>
+                        <button type="submit" class="btn btn-primary">Guardar Vehículo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="panel-conductores" class="panel">
+        <header class="panel-header">
+            <h1>Gestión de Conductores</h1>
+            <p>Padrón de infractores registrados</p>
+        </header>
+
+        <div class="split-view">
+            <div class="data-list">
+                <table id="tabla-conductores">
+                    <thead>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Acción</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan="4" class="empty-msg">Cargando conductores...</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="data-form">
+                <h3>Registrar / Editar</h3>
+                <form id="form-conductor">
+                    <input type="hidden" id="conductor-id">
+
+                    <div class="form-group">
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" placeholder="Ej: 35123456" minlength="7" maxlength="8" pattern="[0-9]+" title="Ingrese un DNI válido sin puntos" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Ej: Juan" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" placeholder="Ej: Pérez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="licencia">N° de Licencia:</label>
+                        <input type="text" id="licencia" placeholder="Ej: 12345678" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="btn-limpiar-conductor">Limpiar</button>
+                        <button type="submit" class="btn btn-primary" id="btn-submit-conductor">Guardar Conductor</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="panel-autoridades" class="panel">
+        <header class="panel-header">
+            <h1>Gestión de Autoridades</h1>
+            <p>Registro de oficiales e inspectores de tránsito</p>
+        </header>
+
+        <div class="split-view">
+            <div class="data-list">
+                <table id="tabla-autoridades">
+                    <thead>
+                    <tr>
+                        <th>Oficial</th>
+                        <th>N° Placa</th>
+                        <th>N° Legajo</th>
+                        <th>Acción</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td colspan="4" class="empty-msg">Cargando autoridades...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="data-form">
+                <h3>Registrar Oficial</h3>
+                <form id="form-autoridad">
+                    <input type="hidden" id="autoridad-id">
+
+                    <div class="form-group">
+                        <label for="aut-dni">DNI:</label>
+                        <input type="text" id="aut-dni" minlength="7" maxlength="8" pattern="[0-9]+" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aut-nombre">Nombre:</label>
+                        <input type="text" id="aut-nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aut-apellido">Apellido:</label>
+                        <input type="text" id="aut-apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aut-placa">Número de Placa:</label>
+                        <input type="number" id="aut-placa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aut-legajo">Número de Legajo:</label>
+                        <input type="number" id="aut-legajo" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="btn-submit-autoridad">Guardar Oficial</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="panel-actas" class="panel">
+        <header class="panel-header">
+            <h1>Labrado de Actas</h1>
+            <p>Generación de multas y asignación de infracciones</p>
+        </header>
+
+        <div class="split-view">
+            <div class="data-list">
+                <table id="tabla-actas">
+                    <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Vehículo</th>
+                        <th>Conductor</th>
+                        <th>Lugar</th>
+                        <th>Infracción</th>
+                        <th>Acción</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan="5" class="empty-msg">Cargando actas...</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="data-form" style="max-height: 70vh; overflow-y: auto;">
+                <h3>Nueva Acta de Constatación</h3>
+                <form id="form-acta">
+                    <input type="hidden" id="acta-id">
+
+                    <div class="form-group">
+                        <label for="fechaLabrado">Fecha de Labrado:</label>
+                        <input type="date" id="fechaLabrado" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horaLabrado">Hora de Labrado:</label>
+                        <input type="time" id="horaLabrado" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lugarConstatacion">Lugar de Constatación:</label>
+                        <input type="text" id="lugarConstatacion" placeholder="Ej: Ruta 7, Km 15" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-vehiculo">Vehículo Involucrado:</label>
+                        <select id="select-vehiculo" required>
+                            <option value="">Cargando vehículos...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-conductor">Conductor (Licencia):</label>
+                        <select id="select-conductor" required>
+                            <option value="">Cargando conductores...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observaciones">Observaciones:</label>
+                        <textarea id="observaciones" rows="3" style="width: 100%; padding: 10px; border: 1px solid var(--border-color);" placeholder="Detalles extra..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-autoridad">Autoridad de Constatación:</label>
+                        <select id="select-autoridad" required>
+                            <option value="">Cargando autoridades...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripInfraccion">Descripción de la Infracción:</label>
+                        <input type="text" id="descripInfraccion" placeholder="Ej: Exceso de velocidad en curva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="importeInfraccion">Importe de la Infracción ($):</label>
+                        <input type="number" id="importeInfraccion" step="0.01" min="0" placeholder="Ej: 15000.50" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="btn-limpiar-acta">Limpiar</button>
+                        <button type="submit" class="btn btn-primary" id="btn-submit-acta">Generar Acta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
 </body>
 </html>

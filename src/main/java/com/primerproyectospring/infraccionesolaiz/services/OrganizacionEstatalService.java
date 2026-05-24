@@ -1,4 +1,7 @@
 package com.primerproyectospring.infraccionesolaiz.services;
 
-public interface OrganizacionEstatalService {
+import com.primerproyectospring.infraccionesolaiz.entities.OrganizacionEstatal;
+
+public interface OrganizacionEstatalService extends BaseService<OrganizacionEstatal, Long> {
+
 }
