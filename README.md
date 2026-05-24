@@ -51,5 +51,5 @@ Creá una base de datos en MySQL y luego editá el archivo `src/main/resources/a
 - Labrado de Actas con cruce de datos relacionales en tiempo real.
 - Borrado en cascada controlado por JavaScript para proteger la integridad referencial (Foreign Keys).
 - Validaciones en el cliente (bloqueo de números en nombres, letras en DNI/Licencias).
-- Interfaz gráfica moderna (Glassmorphism) con notificaciones animadas (SweetAlert2).
+- Interfaz gráfica moderna con notificaciones animadas (SweetAlert2).
 - Carga asíncrona de datos para selectores y tablas.
